@@ -1,6 +1,6 @@
 # circle
 
-Circle is a Flutter applications that demonstrates some uses of the flutter pixel-perfect native tool: CustomPaint
+Circle is a Flutter application that demonstrates some uses of the flutter pixel-perfect native tool: CustomPaint
 With it, we are building a Unit Circle (take a look on that) and applying some trigonometry to the thing
 
 ## Future 
