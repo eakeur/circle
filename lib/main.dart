@@ -36,7 +36,7 @@ class _BrandingState extends State<Branding> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 1000));
+    controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 1500));
     animation = Tween<double>(begin: 0, end: 7)
         .animate(CurvedAnimation(parent: controller, curve: Curves.decelerate))
       ..addListener(() => setState(() {}))
@@ -47,7 +47,7 @@ class _BrandingState extends State<Branding> with TickerProviderStateMixin {
         })));
       }
     });
-    controller.forward();
+    Future.delayed(const Duration(milliseconds: 0), () => controller.forward());
     super.initState();
   }
 
@@ -58,7 +58,7 @@ class _BrandingState extends State<Branding> with TickerProviderStateMixin {
       child: Scaffold(
         backgroundColor: Colors.indigo,
         body: Center(
-          child: Text(text.substring(0, animation.value.toInt()), style: TextStyle(fontSize: animation.value * 8, fontWeight: FontWeight.w800, color: Colors.white)),
+          child: Text(text.substring(0, animation.value.toInt()), style: TextStyle(fontSize: 48, fontWeight: FontWeight.w800, color: Colors.white)),
         ),
       ),
     );
